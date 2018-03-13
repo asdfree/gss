@@ -7,9 +7,20 @@ lodown( "gss" , output_dir = file.path( getwd() ) )
 
 library(survey)
 
-gss_df <- 
-	readRDS( file.path( getwd() , 
-		"gss 1972 2016 cross sectional cumulative data release 2 september 29 2017.rds" ) )
+gss_files <-
+	list.files(
+		file.path( getwd() ) ,
+		full.names = TRUE 
+	)
+
+gss_rds <-
+	grep( 
+		"cross sectional cumulative(.*)\.rds$" , 
+		gss_files , 
+		value = TRUE 
+	)
+	
+gss_df <- readRDS( gss_rds )
 
 gss_df <- 
 	transform( 
