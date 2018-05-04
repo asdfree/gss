@@ -4,7 +4,7 @@ Title: gss
 Version: 0.1.0
 Author: Anthony Joseph Damico
 Maintainer: Anthony Joseph Damico <ajdamico@gmail.com>
-Description: A continuous integration package, tested on ajdamico/asdfree commit 2af421476fd61a16caaa327dc763d1b04b1e540d ajdamico/lodown commit a310f6ce9198609b74de1d02f823c72b4326439b
+Description: A continuous integration package, tested on ajdamico/asdfree commit f5b58355ff1eabe87077771e058583ea457dd22d ajdamico/lodown commit a310f6ce9198609b74de1d02f823c72b4326439b
 License: GPL-3
 Imports: survey, lodown, srvyr
 Encoding: UTF-8
