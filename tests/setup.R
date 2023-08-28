@@ -139,7 +139,7 @@ glm_result <-
 	)
 
 summary( glm_result )
-
+stopifnot( nrow( subset( gss_design , year == 2022 ) ) == 3544 )
 library(srvyr)
 gss_srvyr_design <- as_survey( gss_design )
 gss_srvyr_design %>%
