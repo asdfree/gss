@@ -29,7 +29,7 @@ gss_design <-
 	svydesign( 
 		~ vpsu , 
 		strata = ~ interaction( year , vstrat ) , 
-		data = subset( gss_df , year >= 1975 ) , 
+		data = subset( gss_df , year >= 1975 & !is.na( wtssnrps ) ) , 
 		weights = ~ wtssnrps , 
 		nest = TRUE 
 	)
