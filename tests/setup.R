@@ -30,7 +30,7 @@ gss_design <-
 		~ vpsu , 
 		strata = ~ interaction( year , vstrat ) , 
 		data = subset( gss_df , year >= 1975 ) , 
-		weights = ~ wtsscomp , 
+		weights = ~ wtssnrps , 
 		nest = TRUE 
 	)
 gss_design <- 
