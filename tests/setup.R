@@ -29,8 +29,8 @@ gss_design <-
 	svydesign( 
 		~ vpsu , 
 		strata = ~ interaction( year , vstrat ) , 
-		data = subset( gss_df , year >= 1975 ) , 
-		weights = ~ wtsscomp , 
+		data = subset( gss_df , year >= 1975 & !is.na( wtssnrps ) ) , 
+		weights = ~ wtssnrps , 
 		nest = TRUE 
 	)
 gss_design <- 
@@ -135,7 +135,7 @@ glm_result <-
 	)
 
 summary( glm_result )
-stopifnot( nrow( subset( gss_design , year == 2022 ) ) == 3544 )
+stopifnot( nrow( subset( gss_design , year == 2021 ) ) == 4032 )
 library(srvyr)
 gss_srvyr_design <- as_survey( gss_design )
 gss_srvyr_design %>%
