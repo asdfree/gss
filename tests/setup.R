@@ -58,6 +58,7 @@ gss_design <-
 			)
 
 	)
+
 sum( weights( gss_design , "sampling" ) != 0 )
 
 svyby( ~ one , ~ region , gss_design , unwtd.count )
